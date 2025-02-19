@@ -1,15 +1,34 @@
 // lebron james 
-int head, neck;
+int head, neck, x, y;
+ 
  
  
 void setup() { 
   size(620, 620); 
   head=620; 
   neck=613;
+  x=0;
+  y=0;
 } 
 
 void draw(){ 
   background(255);
+  
+  
+  rect(x, y, 100, 300);
+   rect(x+120, y, 70, 300);
+   rect(x+280, y, 80, 300);
+   rect(x+390, y, 50, 300);
+   rect(x+480, y, 80, 300);
+   rect(x+570, y, 45, 300);
+  
+
+  x=x-3;
+  
+  
+  
+  
+  
     ellipse(head-10, 240, 13, 16); //beard
    rect(head-9, 238 , 17, 17); //neck
   ellipse(head, 220, 40, 40); 
@@ -34,5 +53,11 @@ void draw(){
 if (head<0){ 
   head=620;
 } 
+
+if (x<0){ 
+  x=620;
+} 
 }
+ 
+ 
  
