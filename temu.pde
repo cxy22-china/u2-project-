@@ -212,14 +212,14 @@ rect(x + 35 + 570 - 80, y + 20 + 71, 10, 10);
   ellipseY += vy;
   
   
-  if (ellipseY >= 390) { 
-    vy = -abs(vy);       
-  } 
-  if (ellipseY <= 270) { 
-    vy = abs(vy);        
-  }
+ if (ellipseY >= 390) { 
+    if (vy > 0) vy = -vy;  
+} 
+if (ellipseY <= 270) { 
+    if (vy < 0) vy = -vy;  
+}
 
- 
+
   fill(255,255,255);
     fill(180, 123, 15);  
   ellipse(head-10, 240, 13, 16); 
